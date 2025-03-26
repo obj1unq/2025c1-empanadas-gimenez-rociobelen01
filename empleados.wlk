@@ -1,18 +1,38 @@
-//Escribir aqui los objetos
-object empleado {
-    var peso = 60
 
-
-    method peso() {
-      return peso
+object gimenez {
+    var fondoDeSueldo = 300000
+    
+    method pagarSueldo(empleado) {
+      fondoDeSueldo = fondoDeSueldo - empleado.sueldo()
     }
-    method comio(alimento) {
-      peso = peso + alimento.aumentoPorAlimento()
+
+    method fondoDeSueldo(){
+        return fondoDeSueldo
     }
 }
 
-object hamburguesa {
-    method aumentoPorAlimento() {
-      return 6
+object galvan {
+    var sueldo = 15000
+
+    method  sueldo() {
+      return sueldo
+    }
+
+    method sueldo(_aCobrar) {
+      sueldo = _aCobrar
+    }
+}
+
+object baigorria {
+    var sueldo = 0
+    const basePorEmpanada = 15 
+
+    method vendio(empanadasVendidas){
+        sueldo = sueldo + basePorEmpanada * empanadasVendidas
+    }
+
+
+    method sueldo() {
+      return sueldo 
     }
 }
